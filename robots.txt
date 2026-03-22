@@ -1,0 +1,5 @@
+# Ajuste a URL do Sitemap para o domínio final (mesmo da canonical no index.html)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fortetrader.com.br/sitemap.xml
