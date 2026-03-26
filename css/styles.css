@@ -596,6 +596,25 @@ strong {
   }
 }
 
+/* Grid 4 colunas (Autoridade + Por que é diferente) */
+.cards-4 {
+  display: grid;
+  gap: 1.35rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .cards-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .cards-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card-wrap {
   transform-style: preserve-3d;
   will-change: transform;
