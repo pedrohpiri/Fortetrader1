@@ -41,9 +41,6 @@
   }
 
   if (reduceMotion) {
-    if (hasGsap) {
-      gsap.set(".chart-line", { strokeDashoffset: 0 });
-    }
     return;
   }
 
@@ -56,27 +53,7 @@
       .from(".hero-copy h1", { opacity: 0, y: 34, duration: 0.75 }, 0.08)
       .from(".hero-copy .lead", { opacity: 0, y: 24, duration: 0.62 }, 0.18)
       .from(".hero-copy .hero-actions", { opacity: 0, y: 18, duration: 0.5 }, 0.28)
-      .from(".hero-stats li", { opacity: 0, x: -14, duration: 0.45, stagger: 0.07 }, 0.32)
-      .from(
-        ".panel-card-wrap",
-        {
-          opacity: 0,
-          y: 48,
-          scale: 0.9,
-          rotateX: 10,
-          transformOrigin: "center bottom",
-          duration: 0.9,
-          ease: "power3.out",
-        },
-        0.12
-      );
-
-    gsap.to(".chart-line", {
-      strokeDashoffset: 0,
-      duration: 1.75,
-      ease: "power2.inOut",
-      delay: 0.45,
-    });
+      .from(".hero-stats li", { opacity: 0, x: -14, duration: 0.45, stagger: 0.07 }, 0.32);
 
     document.querySelectorAll(".js-section-head").forEach(function (head) {
       gsap.from(head.children, {
@@ -169,7 +146,6 @@
     document.querySelectorAll(".js-reveal").forEach(function (n) {
       obs.observe(n);
     });
-    if (hasGsap) gsap.set(".chart-line", { strokeDashoffset: 0 });
   }
 
   initTilt();

@@ -299,7 +299,7 @@ strong {
 
 @media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
 }
@@ -823,6 +823,46 @@ strong {
   inset: -30% -20%;
   background: linear-gradient(108deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%);
   pointer-events: none;
+}
+
+.quote-author-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quote-avatar-placeholder {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.quote-author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.25;
+}
+
+.quote-author-name {
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.quote-author-role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
 }
 
 .quote-block p {
