@@ -834,13 +834,23 @@ strong {
   margin-bottom: 1rem;
 }
 
-.quote-avatar-placeholder {
+.quote-avatar-placeholder,
+.quote-avatar {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
   border-radius: 50%;
+}
+
+.quote-avatar-placeholder {
   border: 1px dashed rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.quote-avatar {
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .quote-author-meta {
